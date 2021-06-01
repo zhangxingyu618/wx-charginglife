@@ -1,0 +1,93 @@
+
+
+
+<view class="cu-list grid col-3 no-border radius">
+  <view class="cu-item">
+    <view class="cuIcon-squarecheck text-red">
+      <!-- <view class="cu-tag badge" ><block>99+</block></view> -->
+    </view>
+    <text>总计完成</text>
+    <text>{{count}}个</text>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-remind text-red">
+    </view>
+    <text>总计时长</text>
+    <text>{{time}}分钟</text>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-upstage text-red">
+    </view>
+    <text>当前称号</text>
+    <text>{{tag}}</text>
+  </view>
+</view>
+
+<view class="cu-bar bg-white">
+  <view class="action">
+      <text class="cuIcon-tag text-green text-shadow"></text>称号获取
+  </view>
+</view>
+
+<view class="cu-list menu-avatar radius margin-right">
+  <view class="cu-item " wx:for="{{name}}" wx:key="index">
+    <view class="cu-avatar round lg"
+      style="background-image:url(https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/achieve.png);"></view>
+    <view class="content">
+      <view class="text-red">{{item.tage}}</view>
+      <view class="text-gray text-sm flex">
+        <view class="text-cut">
+          总计完成{{item.c}}个，总计时长{{item.t}}分钟
+        </view>
+      </view>
+    </view>
+    <view class="action margin-right">
+      <button class="cu-btn round lines-green bg-green shadow" style="width: 70px;"data-msg='{{item}}' bindtap="get">获取</button>
+    </view>
+  </view>
+  <!-- <view class="cu-item">
+    <view class="cu-avatar round lg"
+      style="background-image:url(https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/achieve.png);"></view>
+    <view class="content">
+      <view class="text-red">充电小学生</view>
+      <view class="text-gray text-sm flex">
+        <view class="text-cut">
+          总计完成10个，总计时长280分钟
+        </view>
+      </view>
+    </view>
+    <view class="action margin-right">
+      <button class="cu-btn round lines-green bg-green shadow" style="width: 70px;" bindtap="tags">获取</button>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cu-avatar round lg"
+      style="background-image:url(https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/achieve.png);"></view>
+    <view class="content">
+      <view class="text-red">时间刺客</view>
+      <view class="text-gray text-sm flex">
+        <view class="text-cut">
+          总计完成20个，总计时长500分钟
+        </view>
+      </view>
+    </view>
+    <view class="action margin-right">
+      <button class="cu-btn round lines-green bg-green shadow" style="width: 70px;" bindtap="tags">获取</button>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cu-avatar round lg"
+      style="background-image:url(https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/achieve.png);"></view>
+    <view class="content">
+      <view class="text-red">时间管理大师</view>
+      <view class="text-gray text-sm flex">
+        <view class="text-cut">
+          总计完成50个，总计时长1000分钟
+        </view>
+      </view>
+    </view>
+    <view class="action margin-right">
+      <button class="cu-btn round lines-green bg-green shadow" style="width: 70px;" bindtap="tags">获取</button>
+    </view>
+  </view> -->
+</view>

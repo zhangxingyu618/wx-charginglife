@@ -1,0 +1,49 @@
+<!--pages/record/record.wxml-->
+
+<view class="cu-list grid col-3 no-border">
+    <view class="cu-item">
+        <view class="cuIcon-squarecheck text-red">
+            <!-- <view class="cu-tag badge" ><block>99+</block></view> -->
+        </view>
+        <text>总计完成</text>
+        <text>{{count}}个</text>
+    </view>
+    <view class="cu-item">
+        <view class="cuIcon-remind text-red">
+        </view>
+        <text>总计时长</text>
+        <text>{{time}}分钟</text>
+    </view>
+    <view class="cu-item">
+        <view class="cuIcon-upstage text-red">
+        </view>
+        <text>当前称号</text>
+        <text>{{tag}}</text>
+    </view>
+</view>
+
+
+
+<view class="cu-bar bg-white">
+    <view class="action">
+        <text class="cuIcon-tag text-green text-shadow"></text>已完成的事件
+    </view>
+</view>
+<view class="cu-timeline" wx:for="{{msg}}" wx:key="_id" wx:if="{{item.finish==true}}">
+    <view class="cu-item cur text-green cuIcon-roundcheckfill">
+        <view class="shadow-blur round text-center" style="background-image: url('https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/background/{{item.num}}.jpg');">
+            <view class="padding-tb-sm text-center text-xxl text-white">
+                {{item.name}}
+            </view>
+            <view class="cu-capsule round padding-bottom-sm">
+                <view class="cu-tag bg-white" wx:if="{{item.type2=='倒计时'}}">{{item.time}}分钟</view>
+                <view class="cu-tag bg-white" wx:if="{{item.type2=='不计时'}}">不计时</view>
+                <!-- <view class="cu-tag line-white"><text class="text-white">{{item.time}}分钟</text></view> -->
+                <view class="cu-tag line-white">
+                    {{item.ctime}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="cu-load bg-white over"></view>

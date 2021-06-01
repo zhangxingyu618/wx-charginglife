@@ -1,0 +1,59 @@
+<!--pages/add/add.wxml-->
+<view class="bg-gradual-blue padding" style="height: 100vh;">
+  <view class="padding bg-white radius shadow-blur">
+    <view class="text-center text-xxl text-{{color}}">
+      来给自己充会电吧！
+    </view>
+    
+      <!-- <image class="radius" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image> -->
+
+      <form catchsubmit="formSubmit" class="text-xl text-{{color}}">
+        <view class="cu-form-group padding">
+          <view class="title padding-left">名称</view>
+          <input class="{{color}}" focus placeholder="请输入待办事件名称" placeholder-style="color:{{color}}"
+            name="name"></input>
+          <text class='cuIcon-edit'></text>
+        </view>
+
+        <radio-group bindchange="group1" class="block" name="type1">
+          <view class="page-section padding cu-form-group">
+            <label class="radio">
+              <radio class="{{color}} margin-sm" value="计时" checked="true" />计时
+            </label>
+            <label class="radio">
+              <radio class="{{color}} margin-sm" value="定目标" />定目标
+            </label>
+            <label class="radio">
+              <radio class="{{color}} margin-sm" value="养习惯" />养习惯
+            </label>
+          </view>
+        </radio-group>
+
+        <radio-group bindchange="group2" class="block" name="type2">
+          <view class="page-section padding cu-form-group">
+            <label class="radio">
+              <radio class="{{color}} margin-sm" value="倒计时" checked="true" />倒计时
+            </label>
+            <!-- <label class="radio">
+        <radio class="{{color}} margin-sm" value="正计时" />正计时
+      </label> -->
+            <label class="radio">
+              <radio class="{{color}} margin-sm" value="不计时" />不计时
+            </label>
+          </view>
+        </radio-group>
+
+        <view wx:if="{{show}}" class="padding text-center">
+          <text class="text-center">选择计时 {{time}} (分钟)</text>
+          <slider activeColor="{{color}}" bindchange="time" min="1" max="120" value="25" name="time" />
+        </view>
+
+        <view class="margin-tb-sm text-center">
+          <button class="cu-btn round bg-white shadow line-{{color}}" form-type="submit">确定</button>
+        </view>
+
+      </form>
+
+
+  </view>
+</view>

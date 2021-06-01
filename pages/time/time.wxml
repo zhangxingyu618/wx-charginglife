@@ -1,0 +1,80 @@
+<!--pages/time/time.wxml-->
+
+<view class="light bg-blue">
+    <!-- 短句 -->
+    <view class="cu-item padding text-xl " hover-class="animation-rotate" style="height: 20vh;">
+        <view class=" fr text-xl" hover-class="animation-turn">
+            <text class="cuIcon-refresh text-blue fr" bindtap="yiyan"></text>
+        </view>
+        <view class="padding-top text-xl flex justify-center">{{yiyan.hitokoto}}</view>
+        <view class="padding-top text-df flex justify-end">
+            <view class="">—— <text wx:if="{{yiyan.from_who!=null}}">{{yiyan.from_who}}</text>「{{yiyan.from}}」
+            </view>
+        </view>
+    </view>
+    <!-- 进度条 -->
+    <view style="height: 20vh;">
+        <view class="padding">
+            <view class="cu-progress round margin-top bg-white striped active" style="height: 10%;">
+                <view class="bg-blue" style="width:{{progress}}%">{{progress}}%</view>
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 电池 -->
+    <view style="height: 30vh;">
+        <view class="batteryHead"></view>
+        <view class="battery padding-top margin100">
+            <view class="batteryColor" style="animation-play-state:{{animation}};"></view>
+            <view class="cover1" style="animation-play-state:{{animation}};"></view>
+            <view class="cover">
+                <view class="font cu-load text-red text-sl">
+                    {{time}}
+                </view>
+            </view>
+            <view class="cover2" style="animation-play-state:{{animation}};"></view>
+        </view>
+    </view>
+
+
+    <!-- 名称标题 -->
+    <view class="flex justify-center padding-top" style="height: 8vh;">
+        <text class="text-xxl">{{msg.name}}</text>
+    </view>
+    <view class="flex justify-center padding-top-sm" style="height: 5vh;">
+        <text class="cuIcon-countdown">进行中</text>
+    </view>
+
+    <!-- 选项 -->
+    <view style="height: 18vh;">
+        <view class="cu-list grid col-3 no-border margin100">
+            <view class="cu-item" bindtap='music'>
+                <view class="cuIcon-musicfill text-red">
+                </view>
+                <text>音乐</text>
+            </view>
+            <view wx:if="{{on}}" class="cu-item" bindtap='stopCount'>
+                <view class="cuIcon-stop text-orange">
+                </view>
+                <text>暂停</text>
+            </view>
+            <view wx:else class="cu-item" bindtap='stopCount'>
+                <view class="cuIcon-playfill text-orange">
+                </view>
+                <text>继续</text>
+            </view>
+            <view class="cu-item text-xs" bindtap='giveUp'>
+                <view class="cuIcon-ellipse text-yellow">
+                </view>
+                <text>放弃</text>
+            </view>
+        </view>
+    </view>
+    <audio src="" id="myAudio" loop></audio>
+
+    <view class="cu-load text-olive text-lg">
+        <text class="cuIcon-activity text-blue" bindtap="cheer">人生既是一场修行 </text>
+    </view>
+
+</view>

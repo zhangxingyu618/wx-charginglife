@@ -1,0 +1,44 @@
+<!-- logo -->
+
+<view class="userinfo light bg-blue padding">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+<view class="cu-list menu sm-border margin-top text-bold">
+  <view class="cu-item arrow" bindtap="tags">
+      <view class="content justify-center fl">
+        <text class="cuIcon-upstage text-blue fl"></text>
+        <text class="text-xl fl">我的称号</text>
+      </view>
+  </view>
+  <view class="cu-item arrow">
+    <button open-type='feedback' class="contact-button" style="width: 100%;">
+      <view class="content justify-center fl">
+        <text class="cuIcon-write text-blue fl"></text>
+        <text class="text-xl fl">问题与反馈</text>
+      </view>
+    </button>
+  </view>
+  <view class="cu-item arrow">
+    <button open-type='contact' bindcontact="handleContact" class="contact-button" style="width: 100%;">
+      <view class="content justify-center fl">
+        <text class="cuIcon-phone text-blue fl"></text>
+        <text class="text-xl fl">联系客服</text>
+      </view>
+    </button>
+  </view>
+  <view class="cu-item arrow" bindtap="about">
+    <view class="content">
+      <text class="cuIcon-titles text-blue"></text>
+      <text class="text-xl">关于我们</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">联系我们</text>
+    </view>
+  </view>
+</view>
+

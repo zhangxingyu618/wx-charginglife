@@ -1,0 +1,43 @@
+<!--index.wxml-->
+
+
+<view class="padding-bottom padding-lr" wx:for="{{todo}}" wx:key="_id" wx:if="{{item.finish==false}}"
+	data-msg='{{item}}' bindlongpress="detail">
+	<view class="bg-img text-white radius shadow-blur margin-top"
+		style="background-image: url('https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/background/{{item.num}}.jpg');"
+		hover-class="animation-rotate">
+		<view class="flex justify-start">
+			<view class="text-xl padding-sm text-bold">{{item.name}}</view>
+		</view>
+		<view class="flex justify-end padding-right">
+			<view wx:if="{{item.type2=='不计时'}}" class="text-xl text-bold padding-lr" data-msg='{{item}}'
+				bindtap="start">完成</view>
+			<view wx:else class="text-xl text-bold padding-lr" data-msg='{{item}}' bindtap="start">开始</view>
+		</view>
+		<view class="flex justify-start padding-sm">
+			<view wx:if="{{item.type2=='倒计时'}}" class="text-df">剩余{{item.time}}分钟</view>
+			<view wx:if="{{item.type2=='正计时'}}" class="text-df">已经进行{{item.time}}分钟</view>
+			<view wx:if="{{item.type2=='不计时'}}" class="text-df">不计时，点击完成</view>
+		</view>
+	</view>
+</view>
+
+<view class="padding-lr">
+	<view class="bg-img text-white radius shadow-blur margin-top"
+		style="background-image: url('https://6368-charginglife-s2sgl-1302535336.tcb.qcloud.la/background/31.jpg');"
+		hover-class="animation-rotate" bindtap="add">
+		<view class="flex justify-center">
+			<view class=" padding-top radius text-xsl">
+				<text class="text-write text-bold cuIcon-add"></text>
+			</view>
+		</view>
+		<view class="text-right padding-right">
+			(点击添加，长按详情)
+		</view>
+	</view>
+</view>
+
+<view wx:if="{{todo==''}}" class="padding">
+	<view class="text-center text-shadow text-cyan text-df">赶快点击上方加号 ☝☝☝</view>
+	<view class="text-center text-shadow text-cyan text-df">开启自己的 <text class="text-lg">Charging Life</text> 吧！</view>
+</view>

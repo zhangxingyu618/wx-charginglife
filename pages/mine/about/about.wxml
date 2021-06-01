@@ -1,0 +1,19 @@
+<!--pages/mine/about/about.wxml-->
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-xl  text-blue'>关于 Chargeing Life</view>
+  <view class='text-content'>
+    <view>Hi！同学们~欢迎使用Chargeing Life小程序！</view>
+    <view class='margin-top-sm'>Charging  life即为充电人生。这是一款用来管理时间的微信小程序，该程序以一种简单易行的时间管理方法——番茄工作法为灵感设计，让我们的使用者在时间管理方面更加清晰。该小程序会把每天的任务以及任务所需的时间进行记录，将你的记录可视化，让使用者更加明确自己时间的用途，从而改进自己的生活。这款小程序对自制力差的人有很大的帮助，它可以让你长时间的专注做一件事，同时可以设定每天的目标任务，督促自己养成一定的好习惯。</view>
+    <view class='margin-top-sm'>番茄工作法是一种简单易行的时间管理方法，在时间管理方面相对于更加微观。使用番茄工作法，选择一个待完成的任务，设定一个番茄时间，在番茄时间内专注工作，中途不允许做任何与该任务无关的事，直到番茄钟响起，然后在纸上画一个记号，记录下来；然后设定一个番茄休息时间，短暂休息一下。结束一天的工作后，根据记录对当日的工作学习情况进行复盘，同时可以对第二天的时间进行规划。</view>
+    <view class='margin-top-sm'>谢谢大家的大力支持！</view>
+    <view class='margin-top-sm'>更多功能敬请期待...</view>
+  </view>
+</view>
+
+<view class='text-content'>
+  <view class="padding-sm">
+    <view class="text-center text-shadow text-cyan text-sm">欢迎大家提出自己宝贵的意见和建议</view>
+    <view class="text-center text-shadow text-cyan text-sm">1846730600@qq.com</view>
+  </view>
+</view>

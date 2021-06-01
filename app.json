@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add/add",
+    "pages/time/time",
+    "pages/record/record",
+    "pages/mine/mine",
+    "pages/mine/about/about",
+    "pages/mine/tags/tags"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将获取您的当前地理位置"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Charging Life",
+    "backgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle":"dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "tabBar":{
+    "selectedColor": "#006835",
+    "list":[{
+      "text":"待办",
+      "pagePath":"pages/index/index",
+      "iconPath":"images/index1.png",
+      "selectedIconPath": "images/index2.png"
+    },
+    {
+      "text":"统计",
+      "pagePath":"pages/record/record",
+      "iconPath":"images/record1.png",
+      "selectedIconPath": "images/record2.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/mine/mine",
+      "iconPath": "images/mine1.png",
+      "selectedIconPath": "images/mine2.png"
+    }
+    ]}
+}
